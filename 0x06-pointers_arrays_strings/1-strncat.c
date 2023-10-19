@@ -11,18 +11,18 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	int c, i;
+
 	c = 0;
-	
+
 	/* Find the size of the 'dest' array */
 	while (dest[c])
 		c++;
 
-
 	/* Append the 'src' string to the 'dest' string up to 'n' bytes */
 	for (i = 0; i < n && src[i] != '\0'; i++)
 		dest[c + i] = src[i];
-	
-	/* null terminate dest*/
+
+	/* null terminate dest */
 	dest[c + i] = '\0';
 	return (dest);
 }
