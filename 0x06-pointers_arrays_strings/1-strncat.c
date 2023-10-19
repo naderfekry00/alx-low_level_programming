@@ -11,10 +11,8 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	int c, i;
-	
 	c = 0;
 	
-
 	/* Find the size of the 'dest' array */
 	while (dest[c])
 		c++;
@@ -26,6 +24,5 @@ char *_strncat(char *dest, char *src, int n)
 	
 	/* null terminate dest*/
 	dest[c + i] = '\0';
-
 	return (dest);
 }
