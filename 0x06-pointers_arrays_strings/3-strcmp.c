@@ -3,12 +3,8 @@
 /**
  * _strcmp - Compares two strings.
  * @s1: The first string to be compared.
- * @s2: The second string to be compared.
- *
- * Return: Integer value indicating the comparison result.
- *   - 0 if the strings are equal.
- *   - A negative value if s1 is less than s2.
- *   - A positive value if s1 is greater than s2.
+ * @s2: The second string to be compared.*
+ * Return: 1 if true, 0 if false
  */
 int _strcmp(char *s1, char *s2)
 {
