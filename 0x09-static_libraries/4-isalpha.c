@@ -1,19 +1,13 @@
-#include <stdio.h>
 #include "main.h"
 /**
- * _isalpha -print the sign of a number
- * @num: ASCii value.
- * Return: 1 if char is lower case and 0 if not
- */
-
-int _isalpha(int num)
+*_isalpha - controls if a character is alphabetical
+*@c: character to be verified
+*Return: return 0 or 1
+*/
+int _isalpha(int c)
 {
-	if ((num >= 'A' && num <= 'Z') || (num >= 'a' && num <= 'z'))
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+return (1);
+
+return (0);
 }

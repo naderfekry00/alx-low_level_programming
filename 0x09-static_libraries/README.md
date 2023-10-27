@@ -1,1 +1,1 @@
-0x09. C - Static libraries tasks
+0x09. C - Static libraries TASks
