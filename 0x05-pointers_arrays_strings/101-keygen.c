@@ -3,24 +3,23 @@
 #include <time.h>
 
 /**
- * main - Prints a sequence of characters.
+ * main: a program generates random valid passwords for program 101-crackme.
  *
- * Description: Prints a sequence of characters based on a condition.
- *
- * Return: 0 (Success)
- */
+ * return: return zero = success
+*/
+
 int main(void)
 {
-	int sum;
+	int num;
 	char c;
 
-	srand(time(null));
-	while (sum <= 2645)
+	srand((unsigned int) time(NULL));
+	while (num <= 1564)
 	{
-		c = rand() % 120;
-		sum += c;
-		putchar (c);
+		c = rand() % 128;
+		num += c;
+		putchar(c);
 	}
-	putchar(2772 - sum);
+	putchar((1564 + 127) - num);
 	return (0);
 }
