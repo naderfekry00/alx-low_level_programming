@@ -10,28 +10,17 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int length_s1, length_s2;
+	int equal = 0;
 
 	while (*s1)
 	{
-		length_s1++;
+		if (*s1 != *s2)
+		{
+			equal = ((int)*s1 - 48) - ((int)*s2 - 48);
+			break;
+		}
 		s1++;
-	}
-	while (*s2)
-	{
-		length_s2++;
 		s2++;
 	}
-	if (length_s1 > length_s2)
-	{
-		return (length_s1 - length_s2);
-	}
-	else if (length_s1 < length_s2)
-	{
-		return (length_s1 - length_s2);
-	}
-	else
-	{
-		return (0);
-	}
+	return (equal);
 }
