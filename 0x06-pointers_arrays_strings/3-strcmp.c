@@ -10,12 +10,28 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-    int i;
+	int length_s1, length_s2;
 
-    for (i = 0; s1[i] && s2[i] && s1[i] == s2[i]; i++)
-    {
-        /* Loop until strings differ or reach the end */
-    }
-
-    return (s1[i] - s2[i]);
+	while (*s1)
+	{
+		length_s1++;
+		s1++;
+	}
+	while (*s2)
+	{
+		length_s2++;
+		s2++;
+	}
+	if (length_s1 > length_s2)
+	{
+		return (length_s1 - length_s2);
+	}
+	else if (length_s1 < length_s2)
+	{
+		return (length_s1 - length_s2);
+	}
+	else
+	{
+		return (0);
+	}
 }
