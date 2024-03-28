@@ -1,32 +1,47 @@
-#include "main.h"
-
 /**
- * _strcmp - Compares two strings.
- * @s1: The first string to be compared.
- * @s2: The second string to be compared.
+ * _strcmp - a function that compares two strings
  *
- * Return: zero if every character in s1 equal in AScII
- * value to every character in s2(or vice versa), else return
- * (1)if a character in s1 is different from s2 and its value
- * is bigger than the one in s2, or (-1) if its value is less
+ * @s1: string 1 input to compare
+ * @s2: against this other string 2
  *
- */
+ * Return: 0 if s1 and s2 are equal
+ *        negative integer if the stopping character
+ *                in @s1 was less than the stopping
+ *                character in @s2
+ *        positive integer if the stopping character
+ *                in @s1 was greater than the stopping
+ *                character in @s2
+*/
+
 int _strcmp(char *s1, char *s2)
 {
-	int ret_urn;
+	int i = 0, r;
 
-	while (*s1 || *s2)/*loope continue if s2 longer than s2 like(Hello)&(Hello!)*/
+	/**
+	 * iterate through src and
+	 * compare it with dest
+	*/
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		if (*s1 == *s2)
+		/**
+		 * if they differ by a single character
+		 * don't iterate further
+		*/
+		if (s1[i] != s2[i])
 		{
-			s1++;
-			s2++;
+			/*
+			 * return the difference between
+			 * the two characters
+			*/
+			r = s1[i] - s2[i];
+			break;
 		}
-		else if (*s1 != *s2)
+		else
 		{
-			ret_urn = ((int)*s2 - (int)*s2);/*(converting)charcters to value in ASCII*/
-			return (ret_urn);
+			r = s1[i] - s2[i];
 		}
+		i++;
 	}
-	return (0);
+
+	return (r);
 }
